@@ -43,6 +43,18 @@ df_couleurs %>%
 #   kable()
 ```
 
+```{r}
+df_couleurs <- tibble(col = c("#4B4B1D", "#92CDEB", "#AE320A", "#B724D3"), viz = "")
+
+df_couleurs %>% 
+  datatable() %>%
+  formatStyle(columns = "viz", valueColumns = "col",
+              backgroundColor = styleEqual(df_couleurs$col, df_couleurs$col))
+
+df_couleurs %>%
+  mutate(viz = cell_spec(viz, background = df_couleurs$col)) %>%
+  kable()
+```
 
 
 Couleurs: 
