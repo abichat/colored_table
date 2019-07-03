@@ -4,63 +4,56 @@ always_allow_html: yes
 ---
 
 
-```{r setup, include=FALSE, message=FALSE}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Colored table in README
+
+```{r, message=FALSE}
 library(tidyverse)
+
+df_colors <- tibble(col = c("#4B4B1D", "#92CDEB", "#AE320A", "#B724D3"), 
+                    viz = c(" ", "  ", "   ", "    "))
+
+```
+
+
+## DT
+
+```{r}
 library(DT)
+
+df_colors %>%
+  datatable() %>%
+  formatStyle(columns = "viz", valueColumns = "col",
+              backgroundColor = styleEqual(df_colors$col, df_colors$col))
+
+```
+
+## kableExtra
+
+```{r, message=FALSE}
 library(kableExtra)
+
+df_colors %>%
+  mutate(viz = cell_spec(viz, background = df_colors$col)) %>%
+  kable(escape = FALSE)
+
+df_colors %>%
+  mutate(viz = cell_spec(viz, background = df_colors$col)) %>%
+  kable() 
 ```
 
-```{r}
-df_couleurs <- tibble(col = c("#4B4B1D", "#92CDEB", "#AE320A", "#B724D3"), 
-                      viz = c(" ", "  ", "   ", "    "))
-
-```
-
-# DT
-```{r}
-
-# df_couleurs %>%
-#   datatable() %>%
-#   formatStyle(columns = "viz", valueColumns = "col",
-#               backgroundColor = styleEqual(df_couleurs$col, df_couleurs$col))
-
-```
-
-# Kable
-
-```{r}
-# df_couleurs %>%
-#   mutate(viz = cell_spec(viz, background = df_couleurs$col)) %>%
-#   kable(format = "html", escape = TRUE)
-# 
-# df_couleurs %>%
-#   mutate(viz = cell_spec(viz, background = df_couleurs$col)) %>%
-#   kable()
-```
-
+## gt
 
 ```{r}
 library(gt)
 
-df_couleurs <- tibble(col = c("#4B4B1D", "#92CDEB", "#AE320A", "#B724D3"), 
-                      viz = c(" ", "  ", "   ", "    ")) 
-
-# tibble(col = c("#4B4B1D", "#92CDEB", "#AE320A", "#B724D3"), 
-#                       viz = c(" ", "  ", "   ", "    ")) %>% 
-#   mutate(Viz = 1:n())
-
-df_couleurs %>% 
+df_colors %>% 
   gt() %>% 
-  data_color(columns = vars(viz), colors = df_couleurs$col)
+  data_color(columns = vars(viz), colors = df_colors$col)
 ```
 
-
-
-<FONT face="DIN Altermate">DIN Altermate</FONT>
-
-<font face="DIN Altermate">abcdefghijklmnopqrstuvwxyz</font> <br>
-<font face="DIN Altermate">ABCDEFGHIJKLMNOPQRSTUVWXYZ</font>
-<font face="DIN Altermate">0123456789-_@&#$€</font><br>
 
 

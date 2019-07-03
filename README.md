@@ -1,43 +1,252 @@
 
-``` r
-df_couleurs <- tibble(col = c("#4B4B1D", "#92CDEB", "#AE320A", "#B724D3"), 
-                      viz = c(" ", "  ", "   ", "    "))
-```
-
-# DT
+# Colored table in README
 
 ``` r
-# df_couleurs %>%
-#   datatable() %>%
-#   formatStyle(columns = "viz", valueColumns = "col",
-#               backgroundColor = styleEqual(df_couleurs$col, df_couleurs$col))
+library(tidyverse)
+
+df_colors <- tibble(col = c("#4B4B1D", "#92CDEB", "#AE320A", "#B724D3"), 
+                    viz = c(" ", "  ", "   ", "    "))
 ```
 
-# Kable
+## DT
 
 ``` r
-# df_couleurs %>%
-#   mutate(viz = cell_spec(viz, background = df_couleurs$col)) %>%
-#   kable(format = "html", escape = TRUE)
-# 
-# df_couleurs %>%
-#   mutate(viz = cell_spec(viz, background = df_couleurs$col)) %>%
-#   kable()
+library(DT)
+
+df_colors %>%
+  datatable() %>%
+  formatStyle(columns = "viz", valueColumns = "col",
+              backgroundColor = styleEqual(df_colors$col, df_colors$col))
 ```
+
+    ## PhantomJS not found. You can install it with webshot::install_phantomjs(). If it is installed, please make sure the phantomjs executable can be found via the PATH variable.
+
+<!--html_preserve-->
+
+<div id="htmlwidget-61948ba1ab39ad5c0698" class="datatables html-widget" style="width:100%;height:auto;">
+
+</div>
+
+<script type="application/json" data-for="htmlwidget-61948ba1ab39ad5c0698">{"x":{"filter":"none","data":[["1","2","3","4"],["#4B4B1D","#92CDEB","#AE320A","#B724D3"],[" ","  ","   ","    "]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>col<\/th>\n      <th>viz<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"rowCallback":"function(row, data) {\nvar value=data[1]; $(this.api().cell(row, 2).node()).css({'background-color':value == '#4B4B1D' ? '#4B4B1D' : value == '#92CDEB' ? '#92CDEB' : value == '#AE320A' ? '#AE320A' : value == '#B724D3' ? '#B724D3' : ''});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+
+<!--/html_preserve-->
+
+## kableExtra
+
+``` r
+library(kableExtra)
+
+df_colors %>%
+  mutate(viz = cell_spec(viz, background = df_colors$col)) %>%
+  kable(escape = FALSE)
+```
+
+<table>
+
+<thead>
+
+<tr>
+
+<th style="text-align:left;">
+
+col
+
+</th>
+
+<th style="text-align:left;">
+
+viz
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td style="text-align:left;">
+
+\#4B4B1D
+
+</td>
+
+<td style="text-align:left;">
+
+<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #4B4B1D !important;">
+</span>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+\#92CDEB
+
+</td>
+
+<td style="text-align:left;">
+
+<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #92CDEB !important;">
+</span>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+\#AE320A
+
+</td>
+
+<td style="text-align:left;">
+
+<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #AE320A !important;">
+</span>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+\#B724D3
+
+</td>
+
+<td style="text-align:left;">
+
+<span style="     border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #B724D3 !important;">
+</span>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+``` r
+df_colors %>%
+  mutate(viz = cell_spec(viz, background = df_colors$col)) %>%
+  kable() 
+```
+
+<table>
+
+<thead>
+
+<tr>
+
+<th style="text-align:left;">
+
+col
+
+</th>
+
+<th style="text-align:left;">
+
+viz
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td style="text-align:left;">
+
+\#4B4B1D
+
+</td>
+
+<td style="text-align:left;">
+
+\<span style=" border-radius: 4px; padding-right: 4px; padding-left:
+4px; background-color: \#4B4B1D \!important;" \> \</span\>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+\#92CDEB
+
+</td>
+
+<td style="text-align:left;">
+
+\<span style=" border-radius: 4px; padding-right: 4px; padding-left:
+4px; background-color: \#92CDEB \!important;" \> \</span\>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+\#AE320A
+
+</td>
+
+<td style="text-align:left;">
+
+\<span style=" border-radius: 4px; padding-right: 4px; padding-left:
+4px; background-color: \#AE320A \!important;" \> \</span\>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+\#B724D3
+
+</td>
+
+<td style="text-align:left;">
+
+\<span style=" border-radius: 4px; padding-right: 4px; padding-left:
+4px; background-color: \#B724D3 \!important;" \> \</span\>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+## gt
 
 ``` r
 library(gt)
 
-df_couleurs <- tibble(col = c("#4B4B1D", "#92CDEB", "#AE320A", "#B724D3"), 
-                      viz = c(" ", "  ", "   ", "    ")) 
-
-# tibble(col = c("#4B4B1D", "#92CDEB", "#AE320A", "#B724D3"), 
-#                       viz = c(" ", "  ", "   ", "    ")) %>% 
-#   mutate(Viz = 1:n())
-
-df_couleurs %>% 
+df_colors %>% 
   gt() %>% 
-  data_color(columns = vars(viz), colors = df_couleurs$col)
+  data_color(columns = vars(viz), colors = df_colors$col)
 ```
 
 <!--html_preserve-->
@@ -46,7 +255,7 @@ df_couleurs %>%
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#mdpjtumnzs .gt_table {
+#bulblzngyr .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -65,13 +274,13 @@ df_couleurs %>%
   /* table.border.top.color */
 }
 
-#mdpjtumnzs .gt_heading {
+#bulblzngyr .gt_heading {
   background-color: #FFFFFF;
   /* heading.background.color */
   border-bottom-color: #FFFFFF;
 }
 
-#mdpjtumnzs .gt_title {
+#bulblzngyr .gt_title {
   color: #000000;
   font-size: 125%;
   /* heading.title.font.size */
@@ -82,7 +291,7 @@ df_couleurs %>%
   border-bottom-width: 0;
 }
 
-#mdpjtumnzs .gt_subtitle {
+#bulblzngyr .gt_subtitle {
   color: #000000;
   font-size: 85%;
   /* heading.subtitle.font.size */
@@ -93,7 +302,7 @@ df_couleurs %>%
   border-top-width: 0;
 }
 
-#mdpjtumnzs .gt_bottom_border {
+#bulblzngyr .gt_bottom_border {
   border-bottom-style: solid;
   /* heading.border.bottom.style */
   border-bottom-width: 2px;
@@ -102,7 +311,7 @@ df_couleurs %>%
   /* heading.border.bottom.color */
 }
 
-#mdpjtumnzs .gt_column_spanner {
+#bulblzngyr .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #A8A8A8;
@@ -110,7 +319,7 @@ df_couleurs %>%
   padding-bottom: 4px;
 }
 
-#mdpjtumnzs .gt_col_heading {
+#bulblzngyr .gt_col_heading {
   color: #000000;
   background-color: #FFFFFF;
   /* column_labels.background.color */
@@ -123,11 +332,11 @@ df_couleurs %>%
   margin: 10px;
 }
 
-#mdpjtumnzs .gt_sep_right {
+#bulblzngyr .gt_sep_right {
   border-right: 5px solid #FFFFFF;
 }
 
-#mdpjtumnzs .gt_group_heading {
+#bulblzngyr .gt_group_heading {
   padding: 8px;
   color: #000000;
   background-color: #FFFFFF;
@@ -151,7 +360,7 @@ df_couleurs %>%
   vertical-align: middle;
 }
 
-#mdpjtumnzs .gt_empty_group_heading {
+#bulblzngyr .gt_empty_group_heading {
   padding: 0.5px;
   color: #000000;
   background-color: #FFFFFF;
@@ -175,33 +384,33 @@ df_couleurs %>%
   vertical-align: middle;
 }
 
-#mdpjtumnzs .gt_striped {
+#bulblzngyr .gt_striped {
   background-color: #f2f2f2;
 }
 
-#mdpjtumnzs .gt_from_md > :first-child {
+#bulblzngyr .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#mdpjtumnzs .gt_from_md > :last-child {
+#bulblzngyr .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#mdpjtumnzs .gt_row {
+#bulblzngyr .gt_row {
   padding: 8px;
   /* row.padding */
   margin: 10px;
   vertical-align: middle;
 }
 
-#mdpjtumnzs .gt_stub {
+#bulblzngyr .gt_stub {
   border-right-style: solid;
   border-right-width: 2px;
   border-right-color: #A8A8A8;
   padding-left: 12px;
 }
 
-#mdpjtumnzs .gt_summary_row {
+#bulblzngyr .gt_summary_row {
   color: #000000;
   background-color: #FFFFFF;
   /* summary_row.background.color */
@@ -211,7 +420,7 @@ df_couleurs %>%
   /* summary_row.text_transform */
 }
 
-#mdpjtumnzs .gt_grand_summary_row {
+#bulblzngyr .gt_grand_summary_row {
   color: #000000;
   background-color: #FFFFFF;
   /* grand_summary_row.background.color */
@@ -221,19 +430,19 @@ df_couleurs %>%
   /* grand_summary_row.text_transform */
 }
 
-#mdpjtumnzs .gt_first_summary_row {
+#bulblzngyr .gt_first_summary_row {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #A8A8A8;
 }
 
-#mdpjtumnzs .gt_first_grand_summary_row {
+#bulblzngyr .gt_first_grand_summary_row {
   border-top-style: double;
   border-top-width: 6px;
   border-top-color: #A8A8A8;
 }
 
-#mdpjtumnzs .gt_table_body {
+#bulblzngyr .gt_table_body {
   border-top-style: solid;
   /* table_body.border.top.style */
   border-top-width: 2px;
@@ -248,56 +457,56 @@ df_couleurs %>%
   /* table_body.border.bottom.color */
 }
 
-#mdpjtumnzs .gt_footnote {
+#bulblzngyr .gt_footnote {
   font-size: 90%;
   /* footnote.font.size */
   padding: 4px;
   /* footnote.padding */
 }
 
-#mdpjtumnzs .gt_sourcenote {
+#bulblzngyr .gt_sourcenote {
   font-size: 90%;
   /* sourcenote.font.size */
   padding: 4px;
   /* sourcenote.padding */
 }
 
-#mdpjtumnzs .gt_center {
+#bulblzngyr .gt_center {
   text-align: center;
 }
 
-#mdpjtumnzs .gt_left {
+#bulblzngyr .gt_left {
   text-align: left;
 }
 
-#mdpjtumnzs .gt_right {
+#bulblzngyr .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#mdpjtumnzs .gt_font_normal {
+#bulblzngyr .gt_font_normal {
   font-weight: normal;
 }
 
-#mdpjtumnzs .gt_font_bold {
+#bulblzngyr .gt_font_bold {
   font-weight: bold;
 }
 
-#mdpjtumnzs .gt_font_italic {
+#bulblzngyr .gt_font_italic {
   font-style: italic;
 }
 
-#mdpjtumnzs .gt_super {
+#bulblzngyr .gt_super {
   font-size: 65%;
 }
 
-#mdpjtumnzs .gt_footnote_glyph {
+#bulblzngyr .gt_footnote_glyph {
   font-style: italic;
   font-size: 65%;
 }
 </style>
 
-<div id="mdpjtumnzs" style="overflow-x:auto;">
+<div id="bulblzngyr" style="overflow-x:auto;">
 
 <!--gt table start-->
 
@@ -386,9 +595,3 @@ viz
 </div>
 
 <!--/html_preserve-->
-
-<FONT face="DIN Altermate">DIN Altermate</FONT>
-
-<font face="DIN Altermate">abcdefghijklmnopqrstuvwxyz</font> <br>
-<font face="DIN Altermate">ABCDEFGHIJKLMNOPQRSTUVWXYZ</font>
-<font face="DIN Altermate">0123456789-\_@&\#$€</font><br>
