@@ -19,18 +19,6 @@ df_colors <- tibble(col = c("#4B4B1D", "#92CDEB", "#AE320A", "#B724D3"),
 ```
 
 
-## DT
-
-```{r}
-library(DT)
-
-df_colors %>%
-  datatable() %>%
-  formatStyle(columns = "viz", valueColumns = "col",
-              backgroundColor = styleEqual(df_colors$col, df_colors$col))
-
-```
-
 ## kableExtra
 
 ```{r, message=FALSE}
@@ -53,6 +41,20 @@ library(gt)
 df_colors %>% 
   gt() %>% 
   data_color(columns = vars(viz), colors = df_colors$col)
+```
+
+
+
+## DT
+
+```{r}
+library(DT)
+
+df_colors %>%
+  datatable() %>%
+  formatStyle(columns = "viz", valueColumns = "col",
+              backgroundColor = styleEqual(df_colors$col, df_colors$col))
+
 ```
 
 

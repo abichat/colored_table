@@ -8,29 +8,6 @@ df_colors <- tibble(col = c("#4B4B1D", "#92CDEB", "#AE320A", "#B724D3"),
                     viz = c(" ", "  ", "   ", "    "))
 ```
 
-## DT
-
-``` r
-library(DT)
-
-df_colors %>%
-  datatable() %>%
-  formatStyle(columns = "viz", valueColumns = "col",
-              backgroundColor = styleEqual(df_colors$col, df_colors$col))
-```
-
-    ## PhantomJS not found. You can install it with webshot::install_phantomjs(). If it is installed, please make sure the phantomjs executable can be found via the PATH variable.
-
-<!--html_preserve-->
-
-<div id="htmlwidget-61948ba1ab39ad5c0698" class="datatables html-widget" style="width:100%;height:auto;">
-
-</div>
-
-<script type="application/json" data-for="htmlwidget-61948ba1ab39ad5c0698">{"x":{"filter":"none","data":[["1","2","3","4"],["#4B4B1D","#92CDEB","#AE320A","#B724D3"],[" ","  ","   ","    "]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>col<\/th>\n      <th>viz<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"rowCallback":"function(row, data) {\nvar value=data[1]; $(this.api().cell(row, 2).node()).css({'background-color':value == '#4B4B1D' ? '#4B4B1D' : value == '#92CDEB' ? '#92CDEB' : value == '#AE320A' ? '#AE320A' : value == '#B724D3' ? '#B724D3' : ''});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
-
-<!--/html_preserve-->
-
 ## kableExtra
 
 ``` r
@@ -255,7 +232,7 @@ df_colors %>%
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#bulblzngyr .gt_table {
+#pfdoeakotp .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -274,13 +251,13 @@ df_colors %>%
   /* table.border.top.color */
 }
 
-#bulblzngyr .gt_heading {
+#pfdoeakotp .gt_heading {
   background-color: #FFFFFF;
   /* heading.background.color */
   border-bottom-color: #FFFFFF;
 }
 
-#bulblzngyr .gt_title {
+#pfdoeakotp .gt_title {
   color: #000000;
   font-size: 125%;
   /* heading.title.font.size */
@@ -291,7 +268,7 @@ df_colors %>%
   border-bottom-width: 0;
 }
 
-#bulblzngyr .gt_subtitle {
+#pfdoeakotp .gt_subtitle {
   color: #000000;
   font-size: 85%;
   /* heading.subtitle.font.size */
@@ -302,7 +279,7 @@ df_colors %>%
   border-top-width: 0;
 }
 
-#bulblzngyr .gt_bottom_border {
+#pfdoeakotp .gt_bottom_border {
   border-bottom-style: solid;
   /* heading.border.bottom.style */
   border-bottom-width: 2px;
@@ -311,7 +288,7 @@ df_colors %>%
   /* heading.border.bottom.color */
 }
 
-#bulblzngyr .gt_column_spanner {
+#pfdoeakotp .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #A8A8A8;
@@ -319,7 +296,7 @@ df_colors %>%
   padding-bottom: 4px;
 }
 
-#bulblzngyr .gt_col_heading {
+#pfdoeakotp .gt_col_heading {
   color: #000000;
   background-color: #FFFFFF;
   /* column_labels.background.color */
@@ -332,11 +309,11 @@ df_colors %>%
   margin: 10px;
 }
 
-#bulblzngyr .gt_sep_right {
+#pfdoeakotp .gt_sep_right {
   border-right: 5px solid #FFFFFF;
 }
 
-#bulblzngyr .gt_group_heading {
+#pfdoeakotp .gt_group_heading {
   padding: 8px;
   color: #000000;
   background-color: #FFFFFF;
@@ -360,7 +337,7 @@ df_colors %>%
   vertical-align: middle;
 }
 
-#bulblzngyr .gt_empty_group_heading {
+#pfdoeakotp .gt_empty_group_heading {
   padding: 0.5px;
   color: #000000;
   background-color: #FFFFFF;
@@ -384,33 +361,33 @@ df_colors %>%
   vertical-align: middle;
 }
 
-#bulblzngyr .gt_striped {
+#pfdoeakotp .gt_striped {
   background-color: #f2f2f2;
 }
 
-#bulblzngyr .gt_from_md > :first-child {
+#pfdoeakotp .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#bulblzngyr .gt_from_md > :last-child {
+#pfdoeakotp .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#bulblzngyr .gt_row {
+#pfdoeakotp .gt_row {
   padding: 8px;
   /* row.padding */
   margin: 10px;
   vertical-align: middle;
 }
 
-#bulblzngyr .gt_stub {
+#pfdoeakotp .gt_stub {
   border-right-style: solid;
   border-right-width: 2px;
   border-right-color: #A8A8A8;
   padding-left: 12px;
 }
 
-#bulblzngyr .gt_summary_row {
+#pfdoeakotp .gt_summary_row {
   color: #000000;
   background-color: #FFFFFF;
   /* summary_row.background.color */
@@ -420,7 +397,7 @@ df_colors %>%
   /* summary_row.text_transform */
 }
 
-#bulblzngyr .gt_grand_summary_row {
+#pfdoeakotp .gt_grand_summary_row {
   color: #000000;
   background-color: #FFFFFF;
   /* grand_summary_row.background.color */
@@ -430,19 +407,19 @@ df_colors %>%
   /* grand_summary_row.text_transform */
 }
 
-#bulblzngyr .gt_first_summary_row {
+#pfdoeakotp .gt_first_summary_row {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #A8A8A8;
 }
 
-#bulblzngyr .gt_first_grand_summary_row {
+#pfdoeakotp .gt_first_grand_summary_row {
   border-top-style: double;
   border-top-width: 6px;
   border-top-color: #A8A8A8;
 }
 
-#bulblzngyr .gt_table_body {
+#pfdoeakotp .gt_table_body {
   border-top-style: solid;
   /* table_body.border.top.style */
   border-top-width: 2px;
@@ -457,56 +434,56 @@ df_colors %>%
   /* table_body.border.bottom.color */
 }
 
-#bulblzngyr .gt_footnote {
+#pfdoeakotp .gt_footnote {
   font-size: 90%;
   /* footnote.font.size */
   padding: 4px;
   /* footnote.padding */
 }
 
-#bulblzngyr .gt_sourcenote {
+#pfdoeakotp .gt_sourcenote {
   font-size: 90%;
   /* sourcenote.font.size */
   padding: 4px;
   /* sourcenote.padding */
 }
 
-#bulblzngyr .gt_center {
+#pfdoeakotp .gt_center {
   text-align: center;
 }
 
-#bulblzngyr .gt_left {
+#pfdoeakotp .gt_left {
   text-align: left;
 }
 
-#bulblzngyr .gt_right {
+#pfdoeakotp .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#bulblzngyr .gt_font_normal {
+#pfdoeakotp .gt_font_normal {
   font-weight: normal;
 }
 
-#bulblzngyr .gt_font_bold {
+#pfdoeakotp .gt_font_bold {
   font-weight: bold;
 }
 
-#bulblzngyr .gt_font_italic {
+#pfdoeakotp .gt_font_italic {
   font-style: italic;
 }
 
-#bulblzngyr .gt_super {
+#pfdoeakotp .gt_super {
   font-size: 65%;
 }
 
-#bulblzngyr .gt_footnote_glyph {
+#pfdoeakotp .gt_footnote_glyph {
   font-style: italic;
   font-size: 65%;
 }
 </style>
 
-<div id="bulblzngyr" style="overflow-x:auto;">
+<div id="pfdoeakotp" style="overflow-x:auto;">
 
 <!--gt table start-->
 
@@ -593,5 +570,28 @@ viz
 <!--gt table end-->
 
 </div>
+
+<!--/html_preserve-->
+
+## DT
+
+``` r
+library(DT)
+
+df_colors %>%
+  datatable() %>%
+  formatStyle(columns = "viz", valueColumns = "col",
+              backgroundColor = styleEqual(df_colors$col, df_colors$col))
+```
+
+    ## PhantomJS not found. You can install it with webshot::install_phantomjs(). If it is installed, please make sure the phantomjs executable can be found via the PATH variable.
+
+<!--html_preserve-->
+
+<div id="htmlwidget-985a57661f45db06e271" class="datatables html-widget" style="width:100%;height:auto;">
+
+</div>
+
+<script type="application/json" data-for="htmlwidget-985a57661f45db06e271">{"x":{"filter":"none","data":[["1","2","3","4"],["#4B4B1D","#92CDEB","#AE320A","#B724D3"],[" ","  ","   ","    "]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>col<\/th>\n      <th>viz<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"rowCallback":"function(row, data) {\nvar value=data[1]; $(this.api().cell(row, 2).node()).css({'background-color':value == '#4B4B1D' ? '#4B4B1D' : value == '#92CDEB' ? '#92CDEB' : value == '#AE320A' ? '#AE320A' : value == '#B724D3' ? '#B724D3' : ''});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 
 <!--/html_preserve-->
