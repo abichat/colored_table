@@ -8,6 +8,14 @@ df_colors <- tibble(col = c("#4B4B1D", "#92CDEB", "#AE320A", "#B724D3"),
                     viz = c(" ", "  ", "   ", "    "))
 ```
 
+Expected output:
+
+<center>
+
+<img src="table.png">
+
+</center>
+
 ## kableExtra
 
 ``` r
@@ -232,7 +240,7 @@ df_colors %>%
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#pfdoeakotp .gt_table {
+#qbjskotvij .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -251,13 +259,13 @@ df_colors %>%
   /* table.border.top.color */
 }
 
-#pfdoeakotp .gt_heading {
+#qbjskotvij .gt_heading {
   background-color: #FFFFFF;
   /* heading.background.color */
   border-bottom-color: #FFFFFF;
 }
 
-#pfdoeakotp .gt_title {
+#qbjskotvij .gt_title {
   color: #000000;
   font-size: 125%;
   /* heading.title.font.size */
@@ -268,7 +276,7 @@ df_colors %>%
   border-bottom-width: 0;
 }
 
-#pfdoeakotp .gt_subtitle {
+#qbjskotvij .gt_subtitle {
   color: #000000;
   font-size: 85%;
   /* heading.subtitle.font.size */
@@ -279,7 +287,7 @@ df_colors %>%
   border-top-width: 0;
 }
 
-#pfdoeakotp .gt_bottom_border {
+#qbjskotvij .gt_bottom_border {
   border-bottom-style: solid;
   /* heading.border.bottom.style */
   border-bottom-width: 2px;
@@ -288,7 +296,7 @@ df_colors %>%
   /* heading.border.bottom.color */
 }
 
-#pfdoeakotp .gt_column_spanner {
+#qbjskotvij .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #A8A8A8;
@@ -296,7 +304,7 @@ df_colors %>%
   padding-bottom: 4px;
 }
 
-#pfdoeakotp .gt_col_heading {
+#qbjskotvij .gt_col_heading {
   color: #000000;
   background-color: #FFFFFF;
   /* column_labels.background.color */
@@ -309,11 +317,11 @@ df_colors %>%
   margin: 10px;
 }
 
-#pfdoeakotp .gt_sep_right {
+#qbjskotvij .gt_sep_right {
   border-right: 5px solid #FFFFFF;
 }
 
-#pfdoeakotp .gt_group_heading {
+#qbjskotvij .gt_group_heading {
   padding: 8px;
   color: #000000;
   background-color: #FFFFFF;
@@ -337,7 +345,7 @@ df_colors %>%
   vertical-align: middle;
 }
 
-#pfdoeakotp .gt_empty_group_heading {
+#qbjskotvij .gt_empty_group_heading {
   padding: 0.5px;
   color: #000000;
   background-color: #FFFFFF;
@@ -361,33 +369,33 @@ df_colors %>%
   vertical-align: middle;
 }
 
-#pfdoeakotp .gt_striped {
+#qbjskotvij .gt_striped {
   background-color: #f2f2f2;
 }
 
-#pfdoeakotp .gt_from_md > :first-child {
+#qbjskotvij .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#pfdoeakotp .gt_from_md > :last-child {
+#qbjskotvij .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#pfdoeakotp .gt_row {
+#qbjskotvij .gt_row {
   padding: 8px;
   /* row.padding */
   margin: 10px;
   vertical-align: middle;
 }
 
-#pfdoeakotp .gt_stub {
+#qbjskotvij .gt_stub {
   border-right-style: solid;
   border-right-width: 2px;
   border-right-color: #A8A8A8;
   padding-left: 12px;
 }
 
-#pfdoeakotp .gt_summary_row {
+#qbjskotvij .gt_summary_row {
   color: #000000;
   background-color: #FFFFFF;
   /* summary_row.background.color */
@@ -397,7 +405,7 @@ df_colors %>%
   /* summary_row.text_transform */
 }
 
-#pfdoeakotp .gt_grand_summary_row {
+#qbjskotvij .gt_grand_summary_row {
   color: #000000;
   background-color: #FFFFFF;
   /* grand_summary_row.background.color */
@@ -407,19 +415,19 @@ df_colors %>%
   /* grand_summary_row.text_transform */
 }
 
-#pfdoeakotp .gt_first_summary_row {
+#qbjskotvij .gt_first_summary_row {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #A8A8A8;
 }
 
-#pfdoeakotp .gt_first_grand_summary_row {
+#qbjskotvij .gt_first_grand_summary_row {
   border-top-style: double;
   border-top-width: 6px;
   border-top-color: #A8A8A8;
 }
 
-#pfdoeakotp .gt_table_body {
+#qbjskotvij .gt_table_body {
   border-top-style: solid;
   /* table_body.border.top.style */
   border-top-width: 2px;
@@ -434,56 +442,56 @@ df_colors %>%
   /* table_body.border.bottom.color */
 }
 
-#pfdoeakotp .gt_footnote {
+#qbjskotvij .gt_footnote {
   font-size: 90%;
   /* footnote.font.size */
   padding: 4px;
   /* footnote.padding */
 }
 
-#pfdoeakotp .gt_sourcenote {
+#qbjskotvij .gt_sourcenote {
   font-size: 90%;
   /* sourcenote.font.size */
   padding: 4px;
   /* sourcenote.padding */
 }
 
-#pfdoeakotp .gt_center {
+#qbjskotvij .gt_center {
   text-align: center;
 }
 
-#pfdoeakotp .gt_left {
+#qbjskotvij .gt_left {
   text-align: left;
 }
 
-#pfdoeakotp .gt_right {
+#qbjskotvij .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#pfdoeakotp .gt_font_normal {
+#qbjskotvij .gt_font_normal {
   font-weight: normal;
 }
 
-#pfdoeakotp .gt_font_bold {
+#qbjskotvij .gt_font_bold {
   font-weight: bold;
 }
 
-#pfdoeakotp .gt_font_italic {
+#qbjskotvij .gt_font_italic {
   font-style: italic;
 }
 
-#pfdoeakotp .gt_super {
+#qbjskotvij .gt_super {
   font-size: 65%;
 }
 
-#pfdoeakotp .gt_footnote_glyph {
+#qbjskotvij .gt_footnote_glyph {
   font-style: italic;
   font-size: 65%;
 }
 </style>
 
-<div id="pfdoeakotp" style="overflow-x:auto;">
+<div id="qbjskotvij" style="overflow-x:auto;">
 
 <!--gt table start-->
 
@@ -588,10 +596,10 @@ df_colors %>%
 
 <!--html_preserve-->
 
-<div id="htmlwidget-985a57661f45db06e271" class="datatables html-widget" style="width:100%;height:auto;">
+<div id="htmlwidget-3afb8787b98b3e09d4a6" class="datatables html-widget" style="width:100%;height:auto;">
 
 </div>
 
-<script type="application/json" data-for="htmlwidget-985a57661f45db06e271">{"x":{"filter":"none","data":[["1","2","3","4"],["#4B4B1D","#92CDEB","#AE320A","#B724D3"],[" ","  ","   ","    "]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>col<\/th>\n      <th>viz<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"rowCallback":"function(row, data) {\nvar value=data[1]; $(this.api().cell(row, 2).node()).css({'background-color':value == '#4B4B1D' ? '#4B4B1D' : value == '#92CDEB' ? '#92CDEB' : value == '#AE320A' ? '#AE320A' : value == '#B724D3' ? '#B724D3' : ''});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-3afb8787b98b3e09d4a6">{"x":{"filter":"none","data":[["1","2","3","4"],["#4B4B1D","#92CDEB","#AE320A","#B724D3"],[" ","  ","   ","    "]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>col<\/th>\n      <th>viz<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"rowCallback":"function(row, data) {\nvar value=data[1]; $(this.api().cell(row, 2).node()).css({'background-color':value == '#4B4B1D' ? '#4B4B1D' : value == '#92CDEB' ? '#92CDEB' : value == '#AE320A' ? '#AE320A' : value == '#B724D3' ? '#B724D3' : ''});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 
 <!--/html_preserve-->

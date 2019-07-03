@@ -18,6 +18,10 @@ df_colors <- tibble(col = c("#4B4B1D", "#92CDEB", "#AE320A", "#B724D3"),
 
 ```
 
+Expected output: 
+
+<center><img src="table.png"></center>
+
 
 ## kableExtra
 
