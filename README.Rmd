@@ -16,15 +16,15 @@ df_couleurs <- tibble(col = c("#4B4B1D", "#92CDEB", "#AE320A", "#B724D3"), viz =
 
 ```
 
-# DT
-```{r}
+<!-- # DT -->
+<!-- ```{r} -->
 
-df_couleurs %>% 
-  datatable() %>%
-  formatStyle(columns = "viz", valueColumns = "col",
-              backgroundColor = styleEqual(df_couleurs$col, df_couleurs$col))
+<!-- df_couleurs %>%  -->
+<!--   datatable() %>% -->
+<!--   formatStyle(columns = "viz", valueColumns = "col", -->
+<!--               backgroundColor = styleEqual(df_couleurs$col, df_couleurs$col)) -->
 
-```
+<!-- ``` -->
 
 # Kable
 

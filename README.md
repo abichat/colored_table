@@ -3,26 +3,19 @@
 df_couleurs <- tibble(col = c("#4B4B1D", "#92CDEB", "#AE320A", "#B724D3"), viz = "")
 ```
 
-# DT
+<!-- # DT -->
 
-``` r
-df_couleurs %>% 
-  datatable() %>%
-  formatStyle(columns = "viz", valueColumns = "col",
-              backgroundColor = styleEqual(df_couleurs$col, df_couleurs$col))
-```
+<!-- ```{r} -->
 
-    ## PhantomJS not found. You can install it with webshot::install_phantomjs(). If it is installed, please make sure the phantomjs executable can be found via the PATH variable.
+<!-- df_couleurs %>%  -->
 
-<!--html_preserve-->
+<!--   datatable() %>% -->
 
-<div id="htmlwidget-6e0202616cfaf004f70f" class="datatables html-widget" style="width:100%;height:auto;">
+<!--   formatStyle(columns = "viz", valueColumns = "col", -->
 
-</div>
+<!--               backgroundColor = styleEqual(df_couleurs$col, df_couleurs$col)) -->
 
-<script type="application/json" data-for="htmlwidget-6e0202616cfaf004f70f">{"x":{"filter":"none","data":[["1","2","3","4"],["#4B4B1D","#92CDEB","#AE320A","#B724D3"],["","","",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>col<\/th>\n      <th>viz<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"rowCallback":"function(row, data) {\nvar value=data[1]; $(this.api().cell(row, 2).node()).css({'background-color':value == '#4B4B1D' ? '#4B4B1D' : value == '#92CDEB' ? '#92CDEB' : value == '#AE320A' ? '#AE320A' : value == '#B724D3' ? '#B724D3' : ''});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
-
-<!--/html_preserve-->
+<!-- ``` -->
 
 # Kable
 
