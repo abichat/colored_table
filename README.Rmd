@@ -1,0 +1,48 @@
+---
+output: github_document
+always_allow_html: yes
+---
+
+
+```{r setup, include=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(kableExtra)
+library(tidyverse)
+library(DT)
+```
+
+# Communication
+
+Matériel pour la communication (logo, affiche, flyer...)
+
+
+## Chartre graphique
+
+```{r}
+df_couleurs <-
+  tribble(~Nom, ~`Nom complet`, ~Hexadécimal, ~RGB, ~Aperçu,
+          "Gris", "Very dark grayish blue", "#4B4B4D", "rgb(75, 75, 77)", "",
+          "Bleu", "Very soft blue", "#92C6EB", "rgb(146, 198, 235)", "",
+          "Rouge", "Moderate pink", "#CE3F6A", "rgb(206, 63, 106)", "",
+          "Beige", "Light grayish yellow", "#F7F4D3", "rgb(247, 244, 211)", "")
+
+couleurs <- pull(df_couleurs, Hexadécimal)
+
+
+df_couleurs %>%
+  datatable(options = list(pageLength = nrow(df_couleurs),
+                           dom = "t", ordering = FALSE),
+            rownames = FALSE) %>%
+  formatStyle(columns = 1:4, backgroundColor = "white") %>%
+  formatStyle(columns = "Aperçu", valueColumns = "Hexadécimal",
+              backgroundColor = styleEqual(couleurs, couleurs))
+
+# df_couleurs %>%
+#   mutate(Aperçu = cell_spec(Aperçu, background = couleurs)) %>% 
+#   # kable_styling()
+#   kable()
+```
+
+
+
+Couleurs: 
