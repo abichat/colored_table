@@ -25,7 +25,7 @@ Expected output:
 
 ## kableExtra
 
-```{r, message=FALSE}
+```{r, message=FALSE, result= 'asis'}
 library(kableExtra)
 
 df_colors %>%
@@ -39,7 +39,7 @@ df_colors %>%
 
 ## gt
 
-```{r}
+```{r, result= 'asis'}
 library(gt)
 
 df_colors %>% 
@@ -51,7 +51,7 @@ df_colors %>%
 
 ## DT
 
-```{r}
+```{r, result= 'asis'}
 library(DT)
 
 df_colors %>%
