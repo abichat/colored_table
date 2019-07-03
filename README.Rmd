@@ -12,26 +12,55 @@ library(kableExtra)
 ```
 
 ```{r}
-df_couleurs <- tibble(col = c("#4B4B1D", "#92CDEB", "#AE320A", "#B724D3"), viz = "")
+df_couleurs <- tibble(col = c("#4B4B1D", "#92CDEB", "#AE320A", "#B724D3"), 
+                      viz = c(" ", "  ", "   ", "    "))
 
 ```
 
-<!-- # DT -->
-<!-- ```{r} -->
+# DT
+```{r}
 
-<!-- df_couleurs %>%  -->
-<!--   datatable() %>% -->
-<!--   formatStyle(columns = "viz", valueColumns = "col", -->
-<!--               backgroundColor = styleEqual(df_couleurs$col, df_couleurs$col)) -->
+# df_couleurs %>%
+#   datatable() %>%
+#   formatStyle(columns = "viz", valueColumns = "col",
+#               backgroundColor = styleEqual(df_couleurs$col, df_couleurs$col))
 
-<!-- ``` -->
+```
 
 # Kable
 
 ```{r}
-df_couleurs %>%
-  mutate(viz = cell_spec(viz, background = df_couleurs$col)) %>%
-  kable()
-
+# df_couleurs %>%
+#   mutate(viz = cell_spec(viz, background = df_couleurs$col)) %>%
+#   kable(format = "html", escape = TRUE)
+# 
+# df_couleurs %>%
+#   mutate(viz = cell_spec(viz, background = df_couleurs$col)) %>%
+#   kable()
 ```
+
+
+```{r}
+library(gt)
+
+df_couleurs <- tibble(col = c("#4B4B1D", "#92CDEB", "#AE320A", "#B724D3"), 
+                      viz = c(" ", "  ", "   ", "    ")) 
+
+# tibble(col = c("#4B4B1D", "#92CDEB", "#AE320A", "#B724D3"), 
+#                       viz = c(" ", "  ", "   ", "    ")) %>% 
+#   mutate(Viz = 1:n())
+
+df_couleurs %>% 
+  gt() %>% 
+  data_color(columns = vars(viz), colors = df_couleurs$col)
+```
+
+
+
+<FONT face="DIN Altermate">DIN Altermate</FONT>
+
+<font face="DIN Altermate">abcdefghijklmnopqrstuvwxyz</font> <br>
+<font face="DIN Altermate">ABCDEFGHIJKLMNOPQRSTUVWXYZ</font>
+<font face="DIN Altermate">0123456789-_@&#$€</font><br>
+
 
